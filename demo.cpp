@@ -221,3 +221,128 @@ int main(){
 
 return 0;
 }
+//functions
+#include <iostream>
+using namespace std;
+//function definition
+void printHello(){
+     cout<<"hello\n";
+}
+int main(){//function call/invoke
+ printHello();
+return 0;
+}
+//basics of functions
+#include <iostream>
+using namespace std;
+//sum of 2 num
+int sum(int a,int b){
+     int s=a+b;
+     return s;
+}
+//min of 2 num
+int minOfTwo(int a,int b ){//parameters
+     if(a< b ){
+          return a;
+     }else{
+          return b;
+     }
+}
+int main(){//function call/invoke
+  cout<<"min="<<minOfTwo(5,3)<<endl;//arguments
+return 0;
+}
+//sum of 1 to n
+#include <iostream>
+using namespace std;
+int sumN(int n){//function define
+     int sum=0;
+     for(int i=0;i<=n;i++){
+          sum +=i;
+     }
+     return sum;
+} 
+int main(){//fnctojn call
+     cout<<sumN(5)<<endl;
+     cout<<sumN(10)<<endl;
+
+return 0;
+
+}
+//sum fo digits of a number
+#include <iostream>
+using namespace std;
+int sumOfDigits(int num){
+     int digSum=0;
+     while(num>0){
+     int lastDig =num%10;
+     num=num/10;
+     digSum +=lastDig;
+}
+return digSum;
+}
+int main(){
+   cout<<"sum= "<<sumOfDigits(2356)<<endl;
+return 0;
+}
+//ncr
+#include <iostream>
+using namespace std;
+int factorial(int n){//fcatorial function
+     int fact=1;
+     for(int i=1;i<=n;i++){
+          fact=fact*i;//fact *=i
+     }
+     return fact;
+}
+int nCr(int n,int r){//bionomial coefiicient nCr
+     int fact_n=factorial(n);
+      int fact_r=factorial(r);
+       int fact_nmr=factorial(n-r);
+       return fact_n/(fact_r * fact_nmr);
+}
+int main(){
+     int n=8,r=2;
+     nCr(n,r);
+     cout<<nCr(n,r)<<endl;
+  
+return 0;
+}
+//dec to binary
+#include <iostream>
+using namespace std;
+int decToBinary(int decNum){
+     int ans=0,pow=1;
+     while(decNum>0){
+          int rem= decNum%2;
+          decNum/=2;//decnum=decNum/2
+
+          ans +=(rem*pow);
+          pow=pow*10;//pow *=10
+     }
+     return ans;
+}
+    int main(){
+     int decNum =5;
+     cout<<decToBinary(decNum)<<endl;
+  return 0;
+}
+//binary to deciimal
+#include <iostream>
+using namespace std;
+int decToBinary(int decNum){
+     int ans=0,pow=1;
+     while(decNum>0){
+          int rem= decNum%2;
+          decNum/=2;//decnum=decNum/2
+
+          ans +=(rem*pow);
+          pow=pow*10;//pow *=10
+     }
+     return ans;
+}
+    int main(){
+     int decNum =5;
+     cout<<decToBinary(decNum)<<endl;
+  return 0;
+}
